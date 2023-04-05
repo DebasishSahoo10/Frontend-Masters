@@ -16,4 +16,4 @@ console.log(element);
 // Output: { type: 'h1', props: { className: 'my-title', children: 'Hello, World!' }, key: null, ref: null }
 ```
 4. So using React.createElement we create a new Component. what is a component? it is completely piece of small functional code block (a small app basically), which can be used again and again in the same project. Imagine it is like a rubber stamp. we created the rubber stamp once then whenever we needed that, we just do a boom on the paper.
-5. Next thing will be : One way data Flow. React has this rule that any data can be passed from Parent component to Child component but vice versa is not possible. It is really good for debugging as it shows us the full track of the data.
+5. Next thing will be : One way data Flow. React has this rule that any data can be passed from Parent component to Child component but vice versa is not possible. It is really good for debugging as it shows us the full track of the data. After React introduced it, most other Frameworks implemented the same.
