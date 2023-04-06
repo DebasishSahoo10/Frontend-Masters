@@ -39,3 +39,5 @@ Asset Optimization: Vite can optimize assets like images, fonts, and CSS to redu
 
 Output: Vite then outputs the final build artifacts, such as JavaScript files, CSS files, and other assets, ready for deployment to a production environment.
 ```
+10. Render functions are meant to be always state less it, it means they should not never modify/mutate global data (basically no side effects). Render functions also should be fast.
+11. Hooks shouldn't be created on any condition, there usage can be conditonal but their creation shouldn't be.
