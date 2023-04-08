@@ -46,3 +46,25 @@ Output: Vite then outputs the final build artifacts, such as JavaScript files, C
 14. What is the Idea behind Hooks : The idea behind Hooks is to provide a more straightforward and unified way to handle state and side effects in React components. Prior to Hooks, complex state management and side-effect logic often required the use of class components with lifecycle methods, which could lead to cumbersome and harder-to-understand code. Hooks were introduced to simplify this process and make it easier to manage state and side effects in functional components.
 15. Why Hooks are called Hooks : Hooks are called "Hooks" because they are special functions that allow developers to "hook into" React's lifecycle and state management features, enabling functional components to use previously exclusive features of class components
 16. Naming of useEffect : The useEffect hook in React is called "useEffect" because it allows developers to perform side effects in functional components, such as fetching data, updating the DOM, or subscribing to data streams, after the component has rendered.
+17. Can we have several useEffects for one component ? : Yes, it is perfectly fine to have multiple useEffects under one Component?
+18. ***What is the useEffect hook*** : useEffect is a hook in React that allows you to perform side effects in functional components, such as fetching data, updating the DOM, or subscribing to data streams, after the component has rendered. It is commonly used for handling asynchronous operations or interactions with the external world.
+19. The useEffect hook works by taking two arguments: a function and an array of dependencies. The function you pass as the first argument to useEffect will be executed after the component has rendered, and it will be executed again whenever any of the dependencies in the array change. The dependencies are specified as the second argument to useEffect, and they determine when the effect should be re-run. Now there can be three states of that dependency array, let's look at it via code examples :
+```javascript
+  const [data, setData] = useState([]);
+
+  // On Every Render
+  useEffect(() => {
+    console.log("I will run first time my component rendered")
+    console.log("And I will also run every time my component re-renders due to changes in its own state, props, or any other component in the app")
+  });
+
+  // Only on the First Render
+  useEffect(() => {
+    console.log("I will run only the first time my component rendered")
+  }, []);
+
+  // On the First Render + whenever the value of data changes (dependency array)
+  useEffect(() => {
+    console.log("I will run only when the the state called name changes")
+  }, [data]);
+```
