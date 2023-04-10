@@ -75,3 +75,14 @@ Output: Vite then outputs the final build artifacts, such as JavaScript files, C
 24. Breaking components into further components : so the question of when should we pull things out to make their individual component, when something becomes able to individually testable or individually usable or something (any component) is getting too big. Because smaller, single purpose components are easier to read. But making too many components just to have smallest pieces is also a bad idea. App performance will get slow on both the extreme scenarios.
 25. Development Package vs. Production Package : Don't ever ship the Development Package of React as Production, because it is four times bigger than the Production Package. Slack famously did it once.
 26. Strict Mode : Strict Mode ensures the proper working of your app and its statelessness before the actual render, so it runs every initialisation process twice (once before render and once for the render).
+27. Issue of Stale State : The issue of stale state refers to a situation in React where the state used in a component is not updated to the latest value when it is accessed or used in a function or callback.In React, state updates are asynchronous and batched for performance reasons. This means that when you call a state update function, such as setState() in a functional component that uses useState(), the state is not immediately updated. Instead, React schedules the update to be processed later, and the component continues to execute the remaining code. This can lead to a potential issue of stale state, where the component may still be using an outdated value of state, even after calling a state update function.
+28. How to avoid Stale State : Use functional updates for state: When updating state in React, it's recommended to use functional updates instead of directly modifying the current state. You can pass a function to the state updater function to ensure that you are always updating the state based on the latest state value. This can help avoid issues with stale state. Below is the code example =>
+```javascript
+const showHeros = () => {
+  setTabList(prevTabList => heroes); // Use functional update
+};
+const showVillains = () => {
+  setTabList(prevTabList => villains); // Use functional update
+};
+
+```
