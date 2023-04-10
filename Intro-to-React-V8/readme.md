@@ -86,3 +86,4 @@ const showVillains = () => {
 };
 
 ```
+29. Function Memoization : Function memoization is a technique in computer programming where the result of a function is cached based on its input arguments, so that if the same input arguments are passed again, the cached result is returned instead of re-computing the result. This can be useful for optimizing expensive computations or calculations. This is super usefull when we are using a single call back multiple times. and this can be done in React by the hook called useCallback()
