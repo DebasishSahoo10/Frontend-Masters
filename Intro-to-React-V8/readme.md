@@ -87,3 +87,5 @@ const showVillains = () => {
 
 ```
 29. Function Memoization : Function memoization is a technique in computer programming where the result of a function is cached based on its input arguments, so that if the same input arguments are passed again, the cached result is returned instead of re-computing the result. This can be useful for optimizing expensive computations or calculations. This is super usefull when we are using a single call back multiple times. and this can be done in React by the hook called useCallback()
+30. Why useState hook has been made as asynchronous? : The useState hook in React is designed to be asynchronous to optimize performance and improve the efficiency of state updates.
+31. Then how to make it synchronous : by useEffect, if we pass the state variable as a dependency to the the useEffect, then it will run whenever that state variable changes.
