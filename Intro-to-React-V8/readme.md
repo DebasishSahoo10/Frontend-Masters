@@ -98,5 +98,6 @@ return (
     )}
   </div>
 );
-
 ```
+33. Mutation in useState : when updating the state of useState variable, if we are directly mutating the previous state and then it won't update the state right away, that's why methods like map and filter works to successfully to update the previous state (as they make a copy of the provided array) but thinks like sort which directly mutates the array fails to update the array. Now why react works this way ?
+34. Shallow Comparison : React uses a mechanism called "shallow comparison" to detect changes in state and trigger re-renders. When you mutate the previous state object or array directly, React may not detect the change, as the reference to the object or array remains the same. As a result, the component may not re-render, and the updated state may not be reflected in the UI.
