@@ -120,4 +120,7 @@ return (
 41. Is React Backward Compatible : 
   - Yes, React generally strives to maintain backward compatibility, which means that code written using older versions of React should continue to work with newer versions of React without requiring major modifications. However, there may be exceptions where certain features or APIs are deprecated, changed, or removed in newer versions of React, which could potentially break existing code.
   - React follows a semantic versioning (semver) convention, which means that major version changes may introduce breaking changes, while minor and patch version changes are expected to be backward compatible. React provides detailed release notes and documentation for each version, outlining any changes, deprecations, or removals, to help developers understand the implications of upgrading.
-42. 
+42. Why we need a Router in our App : Reasons can be many but the most important one is to build SPAs (Single Page Applications).
+43. Difference between A tag and Link tag : A tag refresh the page to take you to the given path. But Link does that without refreshing the page.
+44. Note : Routing and Accessibility are hard when they go together but the React Router handeled this really well.
+45. Note : useParam won't work without Router/BrowserRouter
