@@ -123,4 +123,4 @@ return (
 42. Why we need a Router in our App : Reasons can be many but the most important one is to build SPAs (Single Page Applications).
 43. Difference between A tag and Link tag : A tag refresh the page to take you to the given path. But Link does that without refreshing the page.
 44. Note : Routing and Accessibility are hard when they go together but the React Router handeled this really well.
-45. Note : useParam won't work without Router/BrowserRouter
+45. Note : useParam won't work without Router/BrowserRouter. But why we use useParams : to get the Dynamic Part of a Routing Link which we are passing through the Link/NavLink and then give it to the component we are passing as an element to the specific route
